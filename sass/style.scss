@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@import 'assets/variables';
+
+body {
+    font-family: $font-stack2;
+}
+
+.loader {
+    background-color: $light-grey;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 6;
+    opacity: .6;
+    animation: martini 3s both;
+
+    i {
+        animation: martiniIcon 4s infinite;
+        color: midnightblue;
+    }
+}
+
+@keyframes martini {
+    0% {
+        transform: scale(1)
+    }
+
+    95% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes martiniIcon {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+
+// First header
+
+.first {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    position: relative;
+
+    &__image {
+        height: 54px;
+        font-size:30px;
+        display: flex;
+        margin: auto;
+        padding: 14px 89px 13px 89px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.021);
+    }
+
+    &__location {
+        p {
+            color: $dark-grey;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: $font-stack2;
+        }
+
+
+        display: flex;
+        height: 54px;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+        background-color: $backround-header;
+
+        i {
+            color: $dark-grey;
+        }
+    }
+
+}
+
+.discover {
+    text-align: center;
+    background-color: $light-grey;
+    margin-bottom: 39px;
+
+    @media all and (min-width: 1024px){
+        padding:30px 0 30px 0;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        padding: 39px 58px 0 42px;
+        font-family: $font-stack2;
+        margin-bottom: 17px;
+
+        @media all and (min-width: 1024px){
+            padding:0;
+            font-size: 40px;
+        }
+    }
+
+    &__booking p {
+        font-size: 18px;
+        font-family: $font-stack2;
+        font-weight: 300;
+        margin-bottom: 27px;
+
+        @media all and (min-width: 1024px){
+            margin-bottom: 18px;
+        }
+    }
+
+    &__button-explore {
+        @include button;
+        @media all and (min-width: 1024px){
+            margin-bottom:0;
+        }
+
+    }
+}
+
+// Fonctionnement
+.function {
+    padding: 0 20px;
+    gap: 20px;
+    margin-bottom: 53px;
+
+    @media all and (min-width: 1024px) {
+        padding: 0 180px;
+    }
+
+    h2 {
+        font-family: $font-stack2;
+        margin-bottom: 34px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+.functioning {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media all and (min-width: 1024px) {
+        gap: 24px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__items {
+        display: flex;
+        border: 1px solid $light-grey;
+        border-radius: 20px;
+        height: 72px;
+        width: 320px;
+        background-color: $light-grey;
+        align-items: center;
+        padding:30px;
+        margin-bottom: 30px;
+        font-family: $font-stack2;
+        font-weight: 500;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        position: relative;
+
+    }
+
+    &__items-icons {
+        display: flex;
+        color: $grey-icons;
+        margin-right: 15px;
+        font-size: 17px;
+        width: 17px;
+        margin-left:5px;
+        
+    }
+
+    &__items-icons-purple {
+        color: $purple;
+        margin-right: 10px;
+        font-size: 17px;
+        margin-left:5px;
+    }
+
+    &__items-numbers {
+        color: $white;
+        background-color: $purple;
+        border: 1px solid $purple;
+        height: 25px;
+        width: 25px;
+        border-radius: 50px;
+        position: absolute;
+        left: -12.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 22px;
+
+    }
+
+    &__items-title {
+        font-weight: 500;
+    }
+
+
+}
+
+// Restaurants
+
+.restaurants {
+    background-color: $light-grey;
+    padding: 0 20px;
+    padding-bottom: 63px;
+
+    @media all and (min-width: 1024px) {
+        padding: 30px 180px;
+    }
+
+    h2 {
+        padding-top: 50px;
+        font-family: $font-stack2;
+        margin-bottom: 13px;
+        @media all and (min-width: 1024px){
+            padding-top:0;
+            margin-bottom: 28px;
+        }
+    }
+
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 18px;
+
+        @media all and (min-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px 100px;
+        }
+
+        &-card {
+            width: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 15px 15px 0px 0px;
+                height: 227px;
+                margin-bottom: 0;
+                display: block;
+            }
+        }
+
+        &-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $green-font;
+            background-color: $paste-green;
+            width: 80px;
+            height: 29px;
+            border: 1px solid $paste-green;
+            border-radius: 2px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+    }
+
+    &__container {
+        background-color: white;
+        border-radius: 0 0 15px 15px;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-icon {
+            position: relative;
+            width: 24px;
+            height: 24px;
+
+            &:hover i.far {
+                opacity: 0;
+            }
+
+            &:hover i.fas {
+                opacity: 1;
+            }
+        }
+
+        i {
+            font-size: 23px;
+            position: absolute;
+            transition: 0.5s;
+
+            &.fas {
+                background: -webkit-linear-gradient(#FF79DA, #9356DC);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 0;
+            }
+        }
+
+        h3 {
+            font-family: $font-stack2;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        p {
+            font-family: $font-stack2;
+            font-size: 17px;
+            font-weight: 300;
+        }
+
+
+    }
+
+
+}
+
+
+@import 'assets/footer';
