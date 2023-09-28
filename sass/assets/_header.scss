@@ -1,0 +1,28 @@
+.first {
+    display: flex;
+    flex-direction: column;
+    
+
+    &__space {
+        display: flex;
+        align-items: center;
+        padding: 14px 89px 13px 17px;
+
+    
+
+        i {
+            color: $dark-grey;
+            font-size: 25px;
+            margin-right:42px;
+        }
+    }
+
+    &__image {
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+}

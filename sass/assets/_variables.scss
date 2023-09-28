@@ -1,0 +1,36 @@
+// Variable
+$backround-header: #EAEAEA;
+$dark-grey: #353535;
+$light-grey: #F6F6F6;
+$purple: #9356DC;
+$pink: #FF79DA;
+$paste-green: #99E2D0;
+$white: #FFFF;
+$grey-icons: #7E7E7E;
+$font-stack1: shrikhand;
+$font-stack2: roboto;
+$green-font: #008766;
+
+
+@mixin button {
+    color: $white;
+    width: 218px;
+    height:50px;
+    border-radius: 25px;
+    padding: 12px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    border: none;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 57px;
+    cursor: pointer;
+    font-family: Roboto;
+    font-weight: 500;
+    transition: .5s;
+    font-size: 16px;
+
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+

@@ -1,0 +1,68 @@
+// Footer
+.footer {
+    background-color: $dark-grey;
+    padding: 22px 25px 22px 25px;
+
+    @media all and (min-width: 1024px) {
+        padding: 30px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    &__title {
+        color: $white;
+        font-family: $font-stack1;
+        font-size: 18px;
+        margin-bottom: 16px;
+
+        @media all and (min-width: 1024px) {
+            margin-bottom: 0;
+            margin-left: 16px;
+        }
+    }
+
+
+    &__items {
+        display: flex;
+        font-family: $font-stack2;
+        gap: 10px;
+        color: $white;
+        align-content: center;
+        @media all and (min-width: 1024px){
+            gap:12px;
+        }
+
+        i {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            width: 12px;
+        }
+        p {
+            color:$white;
+        }
+    }
+
+
+    &__text p {
+        color: $white;
+
+        @media all and (min-width: 1024px) {
+            margin-left: 7px;
+        }
+    }
+
+    &__space {
+        gap: 7px;
+        display: flex;
+        flex-direction: column;
+
+        @media all and (min-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-right: 60px;
+            align-items: center;
+        }
+    }
+}
